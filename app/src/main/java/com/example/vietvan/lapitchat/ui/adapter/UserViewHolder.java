@@ -39,7 +39,7 @@ public class UserViewHolder extends RecyclerView.ViewHolder implements View.OnCl
     }
 
     public void setImage(String src){
-        if(!src.equals("thumb_image"))
+        if(!(src=="thumb_image"))
             Picasso.get().load(src)
                     .placeholder(R.drawable.user)
                     .into(image);
