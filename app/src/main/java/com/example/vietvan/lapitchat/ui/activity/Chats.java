@@ -34,11 +34,13 @@ import com.example.vietvan.lapitchat.R;
 import com.example.vietvan.lapitchat.model.Message;
 import com.example.vietvan.lapitchat.model.User;
 import com.example.vietvan.lapitchat.phonecall.PlaceCall;
+import com.example.vietvan.lapitchat.phonecall.SinchService;
 import com.example.vietvan.lapitchat.ui.adapter.MessagesAdapter;
 import com.example.vietvan.lapitchat.utils.Common;
 import com.example.vietvan.lapitchat.utils.GetTimeAgo;
 import com.example.vietvan.lapitchat.utils.ImageUtils;
 import com.example.vietvan.lapitchat.utils.ResizeWidthAnimation;
+import com.example.vietvan.lapitchat.videocall.Video_CallScreen;
 import com.example.vietvan.lapitchat.videocall.Video_PlaceCall;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -54,6 +56,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.sinch.android.rtc.calling.Call;
 import com.squareup.picasso.Picasso;
 import com.theartofdev.edmodo.cropper.CropImage;
 import com.theartofdev.edmodo.cropper.CropImageView;
@@ -76,6 +79,8 @@ import butterknife.OnClick;
 import de.hdodenhof.circleimageview.CircleImageView;
 import hani.momanii.supernova_emoji_library.Actions.EmojIconActions;
 import hani.momanii.supernova_emoji_library.Helper.EmojiconEditText;
+
+import static com.example.vietvan.lapitchat.phonecall.BaseActivity.getSinchServiceInterfacee;
 
 public class Chats extends AppCompatActivity implements MessagesAdapter.OnClickItem {
 

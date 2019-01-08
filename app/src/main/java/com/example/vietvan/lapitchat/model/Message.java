@@ -1,7 +1,7 @@
 package com.example.vietvan.lapitchat.model;
 
 /**
- * Created by VietVan on 14/07/2018.
+ * Created by HoangHiep on 14/12/2018.
  */
 
 public class Message {

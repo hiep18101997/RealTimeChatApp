@@ -7,12 +7,11 @@
     app:cardUseCompatPadding="true"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="7dp">
+        android:padding="10dp">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/iv_user"
@@ -22,7 +21,6 @@
             android:src="@drawable/user" />
 
         <TextView
-            android:textColor="@color/black"
             android:id="@+id/tv_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -30,6 +28,7 @@
             android:layout_toRightOf="@id/iv_user"
             android:paddingRight="25dp"
             android:text="Username"
+            android:textColor="@color/black"
             android:textSize="19sp" />
 
         <TextView
@@ -40,27 +39,6 @@
             android:layout_toRightOf="@id/iv_user"
             android:text="Status"
             android:textStyle="italic" />
-
-        <Button
-            android:layout_toRightOf="@id/iv_user"
-            android:textSize="12sp"
-            android:textColor="@color/colorPrimary"
-            android:id="@+id/iv_add"
-            android:layout_below="@id/iv_user"
-            android:text="Add"
-            android:layout_width="70dp"
-            android:layout_height="40dp" />
-
-        <Button
-            android:textSize="12sp"
-            android:layout_marginLeft="5dp"
-            android:textColor="@color/colorPrimary"
-            android:id="@+id/iv_hide"
-            android:layout_toRightOf="@id/iv_add"
-            android:layout_below="@id/iv_user"
-            android:text="Hide"
-            android:layout_width="70dp"
-            android:layout_height="40dp" />
 
     </RelativeLayout>
 

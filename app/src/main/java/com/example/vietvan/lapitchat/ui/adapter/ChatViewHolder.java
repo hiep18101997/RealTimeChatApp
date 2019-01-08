@@ -12,7 +12,7 @@ import com.example.vietvan.lapitchat.R;
 import com.squareup.picasso.Picasso;
 
 /**
- * Created by VietVan on 16/07/2018.
+ * Created by HoangHiep on 16/12/2018.
  */
 
 public class ChatViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {

@@ -53,7 +53,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:hint="Email ..."
-                android:text="n@gmail.com"
                 android:inputType="textEmailAddress" />
         </android.support.design.widget.TextInputLayout>
 
@@ -68,7 +67,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Password ..."
-                android:text="zxcvbn"
                 android:inputType="text" />
         </android.support.design.widget.TextInputLayout>
 
@@ -82,10 +80,11 @@
         android:layout_below="@+id/linearLayout"
         android:layout_marginRight="30dp"
         android:layout_marginTop="11dp"
+        android:background="@drawable/bg_button_violet"
+        android:padding="5dp"
         android:text="Create Account"
         android:textColor="@color/white"
-        android:textStyle="bold|italic"
-        android:background="@color/colorPrimary"/>
+        android:textStyle="bold|italic" />
 
     <RelativeLayout
         android:visibility="gone"

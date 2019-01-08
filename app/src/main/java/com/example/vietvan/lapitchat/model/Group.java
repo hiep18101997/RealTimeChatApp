@@ -1,7 +1,7 @@
 package com.example.vietvan.lapitchat.model;
 
 /**
- * Created by VietVan on 24/07/2018.
+ * Created by HoangHiep on 24/12/2018.
  */
 
 public class Group {

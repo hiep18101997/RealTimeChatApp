@@ -1,5 +1,6 @@
 package com.example.vietvan.lapitchat.service;
 
+import android.annotation.SuppressLint;
 import android.app.Service;
 import android.content.Intent;
 import android.graphics.PixelFormat;
@@ -31,6 +32,7 @@ public class ChatHeadService extends Service {
     }
 
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     public void onCreate() {
         super.onCreate();

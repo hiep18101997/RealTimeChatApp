@@ -72,23 +72,6 @@ public class AllUsers extends AppCompatActivity {
                 viewHolder.setStatus(model.getStatus());
                 viewHolder.setImage(model.getThumb_image());
 
-                viewHolder.add.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-
-
-
-                    }
-                });
-
-                viewHolder.hide.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-
-
-
-                    }
-                });
 
                 viewHolder.setItemClickListener(new ItemClickListener() {
                     @Override

@@ -4,7 +4,7 @@ import android.app.Application;
 import android.content.Context;
 
 /**
- * Created by VietVan on 14/07/2018.
+ * Created by HoangHiep on 14/12/2018.
  */
 
 public class GetTimeAgo extends Application {

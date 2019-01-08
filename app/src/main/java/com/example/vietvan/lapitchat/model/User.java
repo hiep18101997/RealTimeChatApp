@@ -3,7 +3,7 @@ package com.example.vietvan.lapitchat.model;
 import java.io.Serializable;
 
 /**
- * Created by VietVan on 12/07/2018.
+ * Created by HoangHiep on 12/12/2018
  */
 
 public class User implements Serializable{

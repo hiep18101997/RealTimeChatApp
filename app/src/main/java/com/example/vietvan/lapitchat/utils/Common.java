@@ -13,7 +13,7 @@ import com.example.vietvan.lapitchat.model.User;
 import com.google.firebase.auth.FirebaseAuth;
 
 /**
- * Created by VietVan on 12/07/2018.
+ * Created by HoangHiep on 12/12/2018.
  */
 
 public class Common {

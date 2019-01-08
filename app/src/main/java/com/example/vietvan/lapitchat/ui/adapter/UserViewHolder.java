@@ -11,14 +11,13 @@ import com.example.vietvan.lapitchat.R;
 import com.squareup.picasso.Picasso;
 
 /**
- * Created by VietVan on 12/07/2018.
+ * Created by HoangHiep on 12/12/2018.
  */
 
 public class UserViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
     public ImageView image;
     public TextView name, status;
-    public Button add, hide;
 
     ItemClickListener itemClickListener;
 
@@ -28,8 +27,6 @@ public class UserViewHolder extends RecyclerView.ViewHolder implements View.OnCl
         image = itemView.findViewById(R.id.iv_user);
         name = itemView.findViewById(R.id.tv_name);
         status = itemView.findViewById(R.id.tv_status);
-        add = itemView.findViewById(R.id.iv_add);
-        hide = itemView.findViewById(R.id.iv_hide);
 
         itemView.setOnClickListener(this);
     }

@@ -19,7 +19,7 @@ import java.util.List;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 /**
- * Created by VietVan on 24/07/2018.
+ * Created by HoangHiep on 24/12/2018.
  */
 
 public class PickGroupChatAdapter extends ArrayAdapter<Group> {

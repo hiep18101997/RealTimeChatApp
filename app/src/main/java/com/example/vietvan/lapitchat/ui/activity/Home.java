@@ -2,6 +2,7 @@ package com.example.vietvan.lapitchat.ui.activity;
 
 import android.Manifest;
 import android.app.AlertDialog;
+import android.content.ComponentName;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -19,6 +20,8 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.example.vietvan.lapitchat.R;
+import com.example.vietvan.lapitchat.phonecall.BaseActivity;
+import com.example.vietvan.lapitchat.phonecall.SinchService;
 import com.example.vietvan.lapitchat.service.ChatHeadService;
 import com.example.vietvan.lapitchat.ui.adapter.SectionsPagerAdapter;
 import com.example.vietvan.lapitchat.utils.Common;
@@ -27,12 +30,13 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ServerValue;
+import com.sinch.android.rtc.SinchError;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.internal.Utils;
 
-public class Home extends AppCompatActivity {
+public class Home extends BaseActivity implements SinchService.StartFailedListener{
 
     private static final String TAG = "TAG";
     private static final int CODE_DRAW_OVER_OTHER_APP_PERMISSION = 1;
@@ -74,7 +78,7 @@ public class Home extends AppCompatActivity {
         ButterKnife.bind(this);
 
         setSupportActionBar(toolBar);
-        getSupportActionBar().setTitle("LapitChat~");
+        getSupportActionBar().setTitle("ChatRealTime");
 
         // Tabs
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
@@ -174,5 +178,35 @@ public class Home extends AppCompatActivity {
         } else {
             super.onActivityResult(requestCode, resultCode, data);
         }
+    }
+
+    @Override
+    protected void onServiceConnected() {
+        getSinchServiceInterface().setStartListener(this);
+        loginClicked();
+    }
+
+    private void loginClicked() {
+
+        if (!getSinchServiceInterface().isStarted()) {
+            getSinchServiceInterface().startClient(FirebaseAuth.getInstance().getUid());
+        }
+    }
+
+    @Override
+    public void onServiceDisconnected(ComponentName componentName) {
+
+    }
+
+
+    @Override
+    public void onStartFailed(SinchError error) {
+
+    }
+
+    @Override
+    public void onStarted() {
+        getSinchServiceInterface().setStartListener(this);
+
     }
 }

@@ -10,7 +10,7 @@ import com.example.vietvan.lapitchat.R;
 import com.squareup.picasso.Picasso;
 
 /**
- * Created by VietVan on 14/07/2018.
+ * Created by HoangHiep on 14/12/2018.
  */
 
 public class FriendsViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {

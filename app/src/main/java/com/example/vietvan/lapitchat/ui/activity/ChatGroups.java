@@ -197,7 +197,7 @@ public class ChatGroups extends AppCompatActivity implements LastMessageAdapter.
                 String name = dataSnapshot.child("name").getValue().toString();
 
                 tvName.setText(name);
-                if (!avatar.equals("something"))
+                if (!(avatar=="something"))
                     Picasso.get().load(avatar)
                             .placeholder(R.drawable.user)
                             .into(ivAva);

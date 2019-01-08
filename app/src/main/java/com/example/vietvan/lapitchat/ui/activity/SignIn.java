@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.TextInputLayout;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.RelativeLayout;
@@ -29,7 +28,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class SignIn extends BaseActivity implements SinchService.StartFailedListener{
+public class SignIn extends BaseActivity implements SinchService.StartFailedListener {
 
     private static final String TAG = "TAG";
     @BindView(R.id.main_app_bar)
@@ -40,13 +39,11 @@ public class SignIn extends BaseActivity implements SinchService.StartFailedList
     TextInputLayout edtPassword;
     @BindView(R.id.rl_load)
     RelativeLayout rlLoad;
-    private ProgressDialog mSpinner;
-
     FirebaseAuth auth;
     FirebaseDatabase database;
     DatabaseReference users;
-
     String uid;
+    private ProgressDialog mSpinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,15 +88,7 @@ public class SignIn extends BaseActivity implements SinchService.StartFailedList
 
                                     uid = auth.getUid();
 
-                                    if (!uid.equals(getSinchServiceInterface().getUserName())) {
-                                        getSinchServiceInterface().stopClient();
-                                    }
-
-                                    if (!getSinchServiceInterface().isStarted()) {
-                                        getSinchServiceInterface().startClient(uid);
-                                    } else {
-                                        openPlaceCallActivity();
-                                    }
+                                    openPlaceCallActivity();
 
                                 }
 
@@ -136,7 +125,7 @@ public class SignIn extends BaseActivity implements SinchService.StartFailedList
 
     @Override
     public void onStarted() {
-        if(FirebaseAuth.getInstance().getCurrentUser() != null)
+        if (FirebaseAuth.getInstance().getCurrentUser() != null)
             openPlaceCallActivity();
     }
 

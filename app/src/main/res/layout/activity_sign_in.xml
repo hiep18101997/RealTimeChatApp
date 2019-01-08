@@ -44,7 +44,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:hint="Email ..."
-                    android:text="vietvan@gmail.com"
                     android:inputType="textEmailAddress" />
             </android.support.design.widget.TextInputLayout>
 
@@ -59,8 +58,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Password ..."
-                    android:inputType="textPassword"
-                    android:text="zxcvbn" />
+                    android:inputType="textPassword"/>
             </android.support.design.widget.TextInputLayout>
 
         </LinearLayout>
@@ -73,11 +71,10 @@
             android:layout_below="@+id/linearLayout"
             android:layout_marginRight="30dp"
             android:layout_marginTop="11dp"
-            android:background="@color/purple"
+            android:background="@drawable/bg_button_violet"
             android:text="LogIn"
             android:textColor="@color/white"
-            android:textStyle="bold|italic"
-            tools:background="@color/colorPrimary" />
+            android:textStyle="bold|italic"/>
 
     </RelativeLayout>
 

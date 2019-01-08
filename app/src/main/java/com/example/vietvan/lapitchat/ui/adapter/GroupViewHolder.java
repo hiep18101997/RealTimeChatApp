@@ -8,7 +8,7 @@ import com.example.vietvan.lapitchat.ItemClickListener;
 import com.example.vietvan.lapitchat.R;
 
 /**
- * Created by VietVan on 24/07/2018.
+ * Created by HoangHiep on 24/12/2018.
  */
 
 public class GroupViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {

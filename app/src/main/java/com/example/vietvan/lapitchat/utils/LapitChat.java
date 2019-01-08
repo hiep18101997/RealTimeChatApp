@@ -15,7 +15,7 @@ import com.squareup.picasso.OkHttp3Downloader;
 import com.squareup.picasso.Picasso;
 
 /**
- * Created by VietVan on 13/07/2018.
+ * Created by HoangHiep on 13/12/2018.
  */
 
 public class LapitChat extends Application{

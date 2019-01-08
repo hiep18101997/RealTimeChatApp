@@ -10,7 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 
 public abstract class BaseActivity extends AppCompatActivity implements ServiceConnection {
 
-    private SinchService.SinchServiceInterface mSinchServiceInterface;
+    private static SinchService.SinchServiceInterface mSinchServiceInterface;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,5 +46,7 @@ public abstract class BaseActivity extends AppCompatActivity implements ServiceC
     protected SinchService.SinchServiceInterface getSinchServiceInterface() {
         return mSinchServiceInterface;
     }
-
+    public static SinchService.SinchServiceInterface getSinchServiceInterfacee() {
+        return mSinchServiceInterface;
+    }
 }

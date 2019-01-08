@@ -22,7 +22,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * Created by VietVan on 01/08/2018.
+ * Created by HoangHiep on 01/08/2018.
  */
 
 public class ListChapAdapter extends RecyclerView.Adapter<ListChapAdapter.ListChapViewHolder> {
